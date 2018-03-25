@@ -1,16 +1,16 @@
 from spider.cnbeta import CnbetaParser
 from spider.cnblog import CnblogParser
 from spider.miaopai import MiaopaParser
-from spider.myBlog import MyBlogParser
+# from spider.myBlog import MyBlogParser
 from spider.techweb import TechwebParser
 from spider.tuicool import TuicoolParser
 
 spiders = [
-    MyBlogParser(),
+    # MyBlogParser(),
     CnbetaParser(),
     CnblogParser(),
     MiaopaParser(),
-    MyBlogParser(),
+    # MyBlogParser(),
     TechwebParser(),
     TuicoolParser()
 ]

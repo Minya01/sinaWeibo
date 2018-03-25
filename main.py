@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import send_task
-# from weibo.weibo_login import wblogin
-from weibo.weibo_qrcode import wblogin
+from weibo.weibo_login import wblogin
+# from weibo.weibo_qrcode import wblogin
 
 if __name__ == '__main__':
     (wei_session, uid) = wblogin()

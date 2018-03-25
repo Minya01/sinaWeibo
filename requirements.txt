@@ -1,4 +1,4 @@
 rsa
 beautifulsoup4
 requests
-PIL
+Pillow

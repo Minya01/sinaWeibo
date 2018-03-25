@@ -38,10 +38,12 @@ class WeiboSender(object):
             self.session.post("https://www.weibo.com/aj/mblog/add?ajwvr=6&__rnd=%d"
                               % int(time.time() * 1000),
                               data=data)
-            logger.info('微博[%s]发送成功' % str(weibo))
+            # logger.info('微博[%s]发送成功' % str(weibo))
+            logger.info('微博[%s]发送成功')
         except Exception as e:
             logger.debug(e)
-            logger.info('微博[%s]发送失败' % str(weibo))
+            # logger.info('微博[%s]发送失败' % str(weibo))
+            logger.info('微博[%s]发送失败')
 
     def upload_images(self, images):
         pids = ""

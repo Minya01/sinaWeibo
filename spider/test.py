@@ -7,7 +7,7 @@ sys.path.insert(0, '..')
 from cnbeta import CnbetaParser
 from cnblog import CnblogParser
 from miaopai import MiaopaParser
-from myBlog import MyBlogParser
+# from myBlog import MyBlogParser
 from techweb import TechwebParser
 from tuicool import TuicoolParser
 
@@ -16,7 +16,7 @@ if __name__ == '__main__':
         CnbetaParser,
         CnblogParser,
         MiaopaParser,
-        MyBlogParser,
+        # MyBlogParser,
         TechwebParser,
         TuicoolParser
     ]
