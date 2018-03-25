@@ -37,7 +37,7 @@ class ToutiaoParser(Spider):
         results = nodes["data"]
         for node in results:
             url = HOME_URL + node["source_url"]
-            msg = node["abstract"]
+            msg = node["title"]
             images = ''
             # images = node["image_url"]
             item = "%s %s %s" % (msg, url, images)
