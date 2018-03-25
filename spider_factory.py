@@ -4,15 +4,18 @@ from spider.miaopai import MiaopaParser
 # from spider.myBlog import MyBlogParser
 from spider.techweb import TechwebParser
 from spider.tuicool import TuicoolParser
+from spider.toutiao import ToutiaoParser
 
 spiders = [
+    ToutiaoParser(),
     # MyBlogParser(),
-    CnbetaParser(),
-    CnblogParser(),
+    # CnbetaParser(),
+    # CnblogParser(),
     MiaopaParser(),
     # MyBlogParser(),
-    TechwebParser(),
-    TuicoolParser()
+    # TechwebParser(),
+    # TuicoolParser(),
+    # ToutiaoParser(),
 ]
 
 currentIndex = 0
