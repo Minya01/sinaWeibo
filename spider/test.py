@@ -11,6 +11,9 @@ from miaopai import MiaopaParser
 from techweb import TechwebParser
 from tuicool import TuicoolParser
 from toutiao import ToutiaoParser
+from wallstreetcn import WallstreetcnParser
+from cnr import CnrParser
+
 
 if __name__ == '__main__':
     types = [
@@ -22,7 +25,9 @@ if __name__ == '__main__':
 
         # TechwebParser,
         # TuicoolParser,
-        ToutiaoParser
+        # ToutiaoParser,
+        # WallstreetcnParser,
+        CnrParser
     ]
     for c in types:
         print(os.linesep + '************* ' + str(c) + ' start *************')

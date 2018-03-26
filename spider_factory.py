@@ -5,16 +5,19 @@ from spider.miaopai import MiaopaParser
 from spider.techweb import TechwebParser
 from spider.tuicool import TuicoolParser
 from spider.toutiao import ToutiaoParser
+from spider.wallstreetcn import WallstreetcnParser
+from spider.cnr import CnrParser
 
 spiders = [
-    ToutiaoParser(),
+    CnrParser(),
+    WallstreetcnParser(),
     # MyBlogParser(),
     # CnbetaParser(),
     # CnblogParser(),
     MiaopaParser(),
     # MyBlogParser(),
     # TechwebParser(),
-    # TuicoolParser(),
+    TuicoolParser(),
     # ToutiaoParser(),
 ]
 

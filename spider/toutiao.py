@@ -23,7 +23,7 @@ class ToutiaoParser(Spider):
         msg = ''
         count = len(items)
         if count > 0:
-            index = random.randint(0, count - 1)
+            index = 1
             msg = items[index]
         return WeiboMessage(msg)
 
@@ -39,8 +39,9 @@ class ToutiaoParser(Spider):
             url = HOME_URL + node["source_url"]
             msg = node["title"]
             images = ''
-            # images = node["image_url"]
-            item = "%s %s %s" % (msg, url, images)
+            # images = node["middle_image"]
+            item = "%s %s" % (msg, url)
+            # item = "%s %s %s" % (msg, url, images)
             items.append(item)
         return items
 
