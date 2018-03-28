@@ -25,7 +25,7 @@ class ToutiaoParser(Spider):
         if count > 0:
             index = 1
             msg = items[index]
-        return WeiboMessage(msg)
+        return WeiboMessage(msg,self.images)
 
     def getItems(self, jsonStr):
         items = []
@@ -35,13 +35,14 @@ class ToutiaoParser(Spider):
         response = requests.get(url=JSON_URL,headers=headers)
         nodes = json.loads(response.text)
         results = nodes["data"]
+        images = []
         for node in results:
             url = HOME_URL + node["source_url"]
             msg = node["title"]
-            images = ''
-            # images = node["middle_image"]
+            image = node["middle_image"]
+            self.images = []
+            self.images.append(image)
             item = "%s %s" % (msg, url)
-            # item = "%s %s %s" % (msg, url, images)
             items.append(item)
         return items
 
