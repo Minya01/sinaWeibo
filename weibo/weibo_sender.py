@@ -49,6 +49,7 @@ class WeiboSender(object):
         pids = ""
         if len(images) > MAX_IMAGES:
             images = images[0: MAX_IMAGES]
+            print(len(images))
         for image in images:
             pid = self.upload_image_stream(image)
             if pid:
@@ -70,8 +71,10 @@ class WeiboSender(object):
 
         # self.http.headers["Content-Type"] = "application/octet-stream"
         image_name = image_url
+        print(image_url)
         try:
             f = self.session.get(image_name, timeout=30)
+            print(f)
             img = f.content
             resp = self.session.post(url, data=img)
             upload_json = re.search('{.*}}', resp.text).group(0)

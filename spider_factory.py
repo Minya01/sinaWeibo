@@ -7,18 +7,24 @@ from spider.tuicool import TuicoolParser
 from spider.toutiao import ToutiaoParser
 from spider.wallstreetcn import WallstreetcnParser
 from spider.cnr import CnrParser
+from spider.cri import CriParser
+from spider.yn import YnParser
+from spider.taobao import TaobaoParser
 
 spiders = [
-    CnrParser(),
-    WallstreetcnParser(),
+    # CriParser(),
     # MyBlogParser(),
     # CnbetaParser(),
     # CnblogParser(),
-    MiaopaParser(),
+    # MiaopaParser(),
     # MyBlogParser(),
     # TechwebParser(),
-    TuicoolParser(),
+    # TuicoolParser(),
     # ToutiaoParser(),
+    # TaobaoParser(),
+    # YnParser(),
+    CnrParser(),
+    WallstreetcnParser(),
 ]
 
 currentIndex = 0

@@ -8,6 +8,7 @@ from spider.spider import Spider
 from weibo.weibo_message import WeiboMessage
 
 HOME_URL = "https://wallstreetcn.com/live/global"
+DOMAIN_URL = "https://wallstreetcn.com"
 
 
 class WallstreetcnParser(Spider):
@@ -25,7 +26,8 @@ class WallstreetcnParser(Spider):
             title = '发一发微博心情倍爽~'
             a = topItem.p.find_all('a')
             if len(a) == 0:
-                title = topItem.p.string
+                title = topItem.p.string + DOMAIN_URL
+                print(title)
             url = ''
             msg = "%s %s" % (title, url)
         return WeiboMessage(msg)

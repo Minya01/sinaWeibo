@@ -6,7 +6,9 @@ import random
 from spider.spider import Spider
 from weibo.weibo_message import WeiboMessage
 
-HOME_URL = "http://www.miaopai.com/miaopai/index_api?cateid=2002&per=20&page=1"
+# HOME_URL = "http://www.miaopai.com/miaopai/index_api?cateid=2002&per=20&page=1"
+HOME_URL = "http://www.miaopai.com/miaopai/index_api?cateid=2003&per=20&page=1"
+
 
 
 class MiaopaParser(Spider):

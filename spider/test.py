@@ -13,6 +13,9 @@ from tuicool import TuicoolParser
 from toutiao import ToutiaoParser
 from wallstreetcn import WallstreetcnParser
 from cnr import CnrParser
+from cri import CriParser
+from yn import YnParser
+from taobao import TaobaoParser
 
 
 if __name__ == '__main__':
@@ -27,7 +30,9 @@ if __name__ == '__main__':
         # TuicoolParser,
         # ToutiaoParser,
         # WallstreetcnParser,
-        CnrParser
+        # CnrParser,
+        # CriParser,
+        TaobaoParser()
     ]
     for c in types:
         print(os.linesep + '************* ' + str(c) + ' start *************')
